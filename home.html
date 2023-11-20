@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Tranzact-Tally</title>
+
+    <link rel="icon" href="ico/tranzact.ico" />
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/dashboard.css" rel="stylesheet" type="text/css" />
+    <link
+      href="css/bootstrap-reboot.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="css/fa-svg-with-js.css" rel="stylesheet" type="text/css" />
+    <link href="css/datatables.min.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+      .navbar .dropdown-menu .form-control {
+        width: 260px;
+      }
+
+      .navbar .dropdown-menu {
+        background-color: #ffffff;
+        width: 320px;
+      }
+
+      .document_option {
+        font-weight: bold;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top"
+        role="navigation"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              class="shrink-logo"
+              src="https://tranzact.s3.amazonaws.com/static/assets/layouts/layout/img/logo.png"
+              width="140px"
+              alt="Logo"
+            />
+          </a>
+
+          <div class="collapse navbar-collapse">
+            <ul
+              class="nav navbar-nav flex-row justify-content-between ml-auto"
+              style="font-size: 13px"
+            >
+              <!--/* Login button block*/-->
+              <li
+                class="dropdown order-1"
+                id="log_in_block"
+                style="margin-top: 3px"
+              >
+                <button
+                  type="button"
+                  id="dropdown_login"
+                  data-toggle="dropdown"
+                  class="btn btn-outline-success dropdown-toggle"
+                  style="font-size: 14px"
+                >
+                  Login <i class="fas fa-user small"></i>
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-right mt-2"
+                  id="login_form"
+                >
+                  <li class="px-3 py-2">
+                    <form class="form" method="POST" role="form">
+                      <div class="form-group mr-4">
+                        <label
+                          for="input_email_id"
+                          class="col-form-label font-weight-bold"
+                          >Tranzact UserID</label
+                        >
+                        <input
+                          class="form-control"
+                          id="input_email_id"
+                          placeholder="Login ID"
+                        />
+                      </div>
+                      <div class="form-group mr-4">
+                        <label
+                          for="input_password"
+                          class="col-form-label font-weight-bold"
+                          >Tranzact Password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="input_password"
+                          placeholder="Password"
+                        />
+                      </div>
+                      <div class="dropdown-divider"></div>
+                      <div class="form-group">
+                        <button
+                          type="submit"
+                          class="btn btn-success btn-sm"
+                          id="button_login_user"
+                        >
+                          Sign In
+                        </button>
+                      </div>
+                    </form>
+                  </li>
+                </ul>
+              </li>
+              <!--/* End Login button block*/-->
+
+              <!--/* Logout button block*/-->
+              <li
+                class="dropdown order-1"
+                style="display: none"
+                id="log_out_block"
+              >
+                <button
+                  type="button"
+                  id="dropdown_logout"
+                  data-toggle="dropdown"
+                  class="btn btn-outline-success dropdown-toggle"
+                >
+                  Logged In <i class="fas fa-user"></i>
+                </button>
+                <ul
+                  class="dropdown-menu dropdown-menu-right mt-2"
+                  id="logout_form"
+                >
+                  <li class="px-3 py-2">
+                    <label>Email</label>
+                    <span
+                      class="btn btn-info btn-block"
+                      id="logged_in_user_id"
+                    ></span>
+
+                    <div class="dropdown-divider"></div>
+                    <button
+                      type="submit"
+                      class="btn btn-danger btn-sm mt-2"
+                      id="button_logout_user"
+                    >
+                      Sign Out
+                    </button>
+                  </li>
+                </ul>
+              </li>
+              <!--/* End Logout button block*/-->
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main role="main">
+      <div>
+        <p
+          class="pt-5 pl-5"
+          style="font-size: 32px; display: none"
+          id="success_msg"
+        >
+          You are logged in !!
+        </p>
+      </div>
+    </main>
+    <script lang="javascript" src="system_files/xlsx.core.min.js"></script>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/fontawesome-all.min.js"></script>
+
+    <script src="content.js"></script>
+    <script src="home_page/initial.js"></script>
+    <script src="js/datatables.min.js" type="text/javascript"></script>
+  </body>
+</html>
